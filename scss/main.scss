@@ -2,6 +2,7 @@
 
 * {
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 body {
@@ -18,16 +19,26 @@ body {
   }
 }
 
-.main--section {
-  display: flex;
-  height: 100dvh;
-  padding: 2rem;
-
-  &:nth-child(1) {
+.main {
+  &--section {
+    display: flex;
+    height: 100dvh;
+    width: 100%;
     background: black;
-  }
 
-  &:nth-child(2) {
-    background: #210505;
+    &.centered {
+      justify-content: center;
+      align-items: center;
+    }
+
+    &.infinite-menu {
+      background: linear-gradient(to right, black 50%, rgba(0, 0, 0, 0) 100%), #430e0e;
+    }
+
+    &--title {
+      font-size: 4rem;
+      font-weight: bold;
+      letter-spacing: 1rem;
+    }
   }
 }

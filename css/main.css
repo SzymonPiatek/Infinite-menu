@@ -3,48 +3,59 @@
   align-items: center;
   width: fit-content;
   overflow: hidden;
+  padding: 0 2rem;
 }
 .infinite-menu--wrapper {
   position: relative;
   max-height: 90dvh;
   overflow: hidden;
   overscroll-behavior: none;
-}
-.infinite-menu--wrapper::before, .infinite-menu--wrapper::after {
-  content: "";
-  position: absolute;
-  background: linear-gradient(var(--dir, to bottom), black, transparent);
-  height: 40%;
-  width: 100%;
-  z-index: 1;
-  pointer-events: none;
-}
-.infinite-menu--wrapper::before {
-  top: 0;
-}
-.infinite-menu--wrapper::after {
-  --dir: to top;
-  bottom: 0;
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 30%, rgb(0, 0, 0) 70%, rgba(0, 0, 0, 0) 100%);
+  mask-image: linear-gradient(to bottom, transparent, rgb(0, 0, 0) 50%, transparent 100%);
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
 }
 .infinite-menu--elements {
   display: flex;
   flex-direction: column;
   overscroll-behavior: contain;
   cursor: grab;
+  flex-wrap: wrap;
 }
 .infinite-menu--elements--element {
   display: flex;
+  align-items: center;
+  gap: 4rem;
   user-select: none;
   line-height: 0;
+  height: 7rem;
+  margin-top: 2rem;
 }
-.infinite-menu--elements--element .title {
-  font-size: 6rem;
+.infinite-menu--elements--element--title {
+  font-size: 5rem;
   text-align: start;
   color: #fff;
+}
+.infinite-menu--elements--element--blocks {
+  display: flex;
+  gap: 1rem;
+}
+.infinite-menu--elements--element--blocks--block {
+  color: #fff;
+  font-size: 1rem;
+  background: #262626;
+  padding: 1rem;
+  border-radius: 1rem;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
 }
 
 * {
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 body {
@@ -63,13 +74,20 @@ body::-webkit-scrollbar {
 .main--section {
   display: flex;
   height: 100dvh;
-  padding: 2rem;
-}
-.main--section:nth-child(1) {
+  width: 100%;
   background: black;
 }
-.main--section:nth-child(2) {
-  background: #210505;
+.main--section.centered {
+  justify-content: center;
+  align-items: center;
+}
+.main--section.infinite-menu {
+  background: linear-gradient(to right, black 50%, rgba(0, 0, 0, 0) 100%), #430e0e;
+}
+.main--section--title {
+  font-size: 4rem;
+  font-weight: bold;
+  letter-spacing: 1rem;
 }
 
 /*# sourceMappingURL=main.css.map */
