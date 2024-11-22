@@ -1,0 +1,33 @@
+@import 'infiniteMenu.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: system-ui, sans-serif;
+  color: white;
+  background: black;
+  padding: 0;
+  margin: 0;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.main--section {
+  display: flex;
+  height: 100dvh;
+  padding: 2rem;
+
+  &:nth-child(1) {
+    background: black;
+  }
+
+  &:nth-child(2) {
+    background: #210505;
+  }
+}

@@ -1,0 +1,53 @@
+.infinite-menu {
+  &--container {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    overflow: hidden;
+  }
+
+  &--wrapper {
+    position: relative;
+    max-height: 90dvh;
+    overflow: hidden;
+    overscroll-behavior: none;
+
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      background: linear-gradient(var(--dir, to bottom), black, transparent);
+      height: 40%;
+      width: 100%;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    &::before {
+      top: 0;
+    }
+
+    &::after {
+      --dir: to top;
+      bottom: 0;
+    }
+  }
+
+  &--elements {
+    display: flex;
+    flex-direction: column;
+    overscroll-behavior: contain;
+    cursor: grab;
+
+    &--element {
+      display: flex;
+      user-select: none;
+      line-height: 0;
+
+      & .title {
+        font-size: 6rem;
+        text-align: start;
+        color: #fff;
+      }
+    }
+  }
+}

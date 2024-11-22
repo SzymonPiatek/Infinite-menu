@@ -1,0 +1,75 @@
+.infinite-menu--container {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  overflow: hidden;
+}
+.infinite-menu--wrapper {
+  position: relative;
+  max-height: 90dvh;
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+.infinite-menu--wrapper::before, .infinite-menu--wrapper::after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(var(--dir, to bottom), black, transparent);
+  height: 40%;
+  width: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+.infinite-menu--wrapper::before {
+  top: 0;
+}
+.infinite-menu--wrapper::after {
+  --dir: to top;
+  bottom: 0;
+}
+.infinite-menu--elements {
+  display: flex;
+  flex-direction: column;
+  overscroll-behavior: contain;
+  cursor: grab;
+}
+.infinite-menu--elements--element {
+  display: flex;
+  user-select: none;
+  line-height: 0;
+}
+.infinite-menu--elements--element .title {
+  font-size: 6rem;
+  text-align: start;
+  color: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: system-ui, sans-serif;
+  color: white;
+  background: black;
+  padding: 0;
+  margin: 0;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.main--section {
+  display: flex;
+  height: 100dvh;
+  padding: 2rem;
+}
+.main--section:nth-child(1) {
+  background: black;
+}
+.main--section:nth-child(2) {
+  background: #210505;
+}
+
+/*# sourceMappingURL=main.css.map */
