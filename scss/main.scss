@@ -26,12 +26,21 @@ body {
     width: 100%;
     background: black;
 
+    &:nth-child(odd) {
+      background: black;
+    }
+
+    &:nth-child(even) {
+      background: #430e0e;
+    }
+
     &.centered {
       justify-content: center;
       align-items: center;
     }
 
     &.infinite-menu {
+      height: calc(100vh - 4rem);
       background: linear-gradient(to right, black 50%, rgba(0, 0, 0, 0) 100%), #430e0e;
     }
 
@@ -39,6 +48,38 @@ body {
       font-size: 4rem;
       font-weight: bold;
       letter-spacing: 1rem;
+    }
+  }
+}
+
+.navbar {
+  &--container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    height: 4rem;
+    padding: 0 2rem;
+  }
+
+  &--logo {
+    font-size: 1.5rem;
+    letter-spacing: 0.5rem;
+    font-family: Helvetica, sans-serif;
+  }
+
+  &--button {
+    background: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 1rem;
+    padding: 0.5rem 2rem;
+    cursor: pointer;
+
+    &:hover {
+      background: #430e0e;
+      border-color: #430e0e;
+      transition: all 0.3s ease;
     }
   }
 }
