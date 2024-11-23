@@ -58,8 +58,16 @@ body {
     justify-content: space-between;
     align-items: center;
     position: sticky;
+    background: black;
+    top: 0;
     height: 4rem;
     padding: 0 2rem;
+    z-index: 1;
+  }
+
+  &--section {
+    display: flex;
+    gap: 1rem;
   }
 
   &--logo {
