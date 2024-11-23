@@ -7,6 +7,22 @@ export function initializeScroll(containerSelector) {
     }
 
     const items = gsap.utils.toArray(container.children);
+
+    gsap.fromTo(
+        items,
+        {
+            opacity: 0,
+            x: "-100%",
+        },
+        {
+            opacity: 1,
+            x: "0%",
+            duration: 1,
+            ease: "power2.out",
+            stagger: 0.05,
+        }
+    );
+
     const wraps = [];
 
     function setupWraps() {

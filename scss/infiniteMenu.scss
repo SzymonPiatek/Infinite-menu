@@ -40,7 +40,6 @@
 
       opacity: 0;
       transform: translateX(-100%);
-      animation: slide-in 0.7s ease-out forwards;
 
       &:hover &--title {
         font-size: 7rem;
@@ -73,16 +72,5 @@
         }
       }
     }
-  }
-}
-
-@keyframes slide-in {
-  from {
-    opacity: 0;
-    transform: translateX(-100%);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
   }
 }
