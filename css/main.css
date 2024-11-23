@@ -63,6 +63,25 @@
   text-decoration: none;
 }
 
+.buttonStyle, .navbar--button, .main--section--buttons--button {
+  display: flex;
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 1rem;
+  padding: 0.5rem 2rem;
+  cursor: pointer;
+}
+.buttonStyle:hover, .navbar--button:hover, .main--section--buttons--button:hover {
+  background: #430e0e;
+  border-color: #430e0e;
+  transition: all 0.3s ease;
+}
+.buttonStyle.alternative:hover, .alternative.navbar--button:hover, .alternative.main--section--buttons--button:hover {
+  background: black;
+  border-color: black;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -82,6 +101,9 @@ body::-webkit-scrollbar {
   width: 100%;
   background: black;
 }
+.main--section:first-child {
+  height: calc(100vh - 4rem);
+}
 .main--section:nth-child(odd) {
   background: black;
 }
@@ -93,13 +115,34 @@ body::-webkit-scrollbar {
   align-items: center;
 }
 .main--section.infinite-menu {
-  height: calc(100vh - 4rem);
   background: linear-gradient(to right, black 50%, rgba(0, 0, 0, 0) 100%), #430e0e;
 }
 .main--section--title {
   font-size: 4rem;
   font-weight: bold;
   letter-spacing: 1rem;
+  text-align: center;
+}
+.main--section--inner {
+  height: 100%;
+  max-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 4rem 0;
+}
+.main--section--buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  max-width: 70%;
+  flex-wrap: wrap;
+}
+.main--section--buttons--button a {
+  color: #fff;
+  font-size: 2rem;
 }
 
 .navbar--container {
@@ -121,19 +164,6 @@ body::-webkit-scrollbar {
   font-size: 1.5rem;
   letter-spacing: 0.5rem;
   font-family: Helvetica, sans-serif;
-}
-.navbar--button {
-  background: transparent;
-  color: #fff;
-  border: 1px solid #fff;
-  border-radius: 1rem;
-  padding: 0.5rem 2rem;
-  cursor: pointer;
-}
-.navbar--button:hover {
-  background: #430e0e;
-  border-color: #430e0e;
-  transition: all 0.3s ease;
 }
 
 /*# sourceMappingURL=main.css.map */

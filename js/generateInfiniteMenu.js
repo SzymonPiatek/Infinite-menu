@@ -16,6 +16,26 @@ export function generateMenu(containerSelector) {
                         </a>`).join("")}
                 </div>
             </div>`).join("");
+
+        const links = container.querySelectorAll("a");
+        links.forEach((link) => {
+            link.addEventListener("click", (event) => {
+                const href = link.getAttribute("href");
+
+                if (href.startsWith("#")) {
+                    event.preventDefault();
+                    const targetId = href.substring(1);
+                    const targetElement = document.getElementById(targetId);
+
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: "smooth",
+                            block: "start",
+                        });
+                    }
+                }
+            });
+        });
     } else {
         console.error(`Kontener ${containerSelector} nie został znaleziony.`);
     }
