@@ -32,7 +32,7 @@
     &--element {
       display: flex;
       align-items: center;
-      gap: 4rem;
+      gap: 1rem;
       user-select: none;
       line-height: 0;
       height: 5rem;
@@ -40,13 +40,8 @@
       opacity: 0;
       transform: translateX(-100%);
 
-      &:hover &--title {
-        font-size: 5rem;
-      }
-
       &--title {
         font-size: 4rem;
-        font-weight: bold;
         text-align: start;
         color: #fff;
         width: fit-content;
@@ -56,16 +51,16 @@
 
       &--blocks {
         display: flex;
-        align-items: center;
         gap: 1rem;
         flex-wrap: wrap;
 
         &--block {
           color: #fff;
           font-size: 1rem;
-          background: #262626;
-          padding: 1rem;
+          background: transparent;
+          border: 1px solid #fff;
           border-radius: 1rem;
+          padding: 0.75rem 1rem;
           text-decoration: none;
           display: inline-block;
           cursor: pointer;
