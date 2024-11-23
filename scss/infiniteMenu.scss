@@ -38,12 +38,21 @@
       height: 8rem;
       margin-top: 1rem;
 
+      opacity: 0;
+      transform: translateX(-100%);
+      animation: slide-in 0.7s ease-out forwards;
+
+      &:hover &--title {
+        font-size: 7rem;
+      }
+
       &--title {
         font-size: 6rem;
         text-align: start;
         color: #fff;
         width: fit-content;
         min-width: fit-content;
+        transition: font-size 0.3s ease;
       }
 
       &--blocks {
@@ -64,5 +73,16 @@
         }
       }
     }
+  }
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
