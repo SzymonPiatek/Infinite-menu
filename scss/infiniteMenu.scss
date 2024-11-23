@@ -9,7 +9,7 @@
 
   &--wrapper {
     position: relative;
-    max-height: calc(80dvh - 4rem);
+    max-height: calc(100dvh - 4rem);
     overflow: hidden;
     overscroll-behavior: none;
 
@@ -36,9 +36,12 @@
       user-select: none;
       line-height: 0;
       height: 5rem;
-
       opacity: 0;
       transform: translateX(-100%);
+
+      &:hover &--title {
+        font-size: 5rem;
+      }
 
       &--title {
         font-size: 4rem;
@@ -64,6 +67,17 @@
           text-decoration: none;
           display: inline-block;
           cursor: pointer;
+
+          &:hover {
+            background: #430e0e;
+            border-color: #430e0e;
+            transition: all 0.3s ease;
+          }
+
+          &.alternative:hover {
+            background: black;
+            border-color: black;
+          }
         }
       }
     }
