@@ -1,0 +1,135 @@
+@import 'infiniteMenu.scss';
+
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.buttonStyle {
+  display: flex;
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 1rem;
+  padding: 0.5rem 2rem;
+  cursor: pointer;
+
+  &:hover {
+    background: #430e0e;
+    border-color: #430e0e;
+    transition: all 0.3s ease;
+  }
+
+  &.alternative:hover {
+    background: black;
+    border-color: black;
+  }
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: system-ui, sans-serif;
+  color: white;
+  background: black;
+  padding: 0;
+  margin: 0;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.main {
+  &--section {
+    display: flex;
+    height: 100dvh;
+    width: 100%;
+    background: black;
+
+    &:first-child {
+      height: calc(100vh - 4rem);
+    }
+
+    &:nth-child(odd) {
+      background: black;
+    }
+
+    &:nth-child(even) {
+      background: #430e0e;
+    }
+
+    &.centered {
+      justify-content: center;
+      align-items: center;
+    }
+
+    &.infinite-menu {
+      background: linear-gradient(to right, black 50%, rgba(0, 0, 0, 0) 100%), #430e0e;
+    }
+
+    &--title {
+      font-size: 4rem;
+      font-weight: bold;
+      letter-spacing: 1rem;
+      text-align: center;
+    }
+
+    &--inner {
+      height: 100%;
+      max-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      padding: 4rem 0;
+    }
+
+    &--buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      max-width: 70%;
+      flex-wrap: wrap;
+
+      &--button {
+        @extend .buttonStyle;
+
+        a {
+          color: #fff;
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}
+
+.navbar {
+  &--container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    background: black;
+    top: 0;
+    height: 4rem;
+    padding: 0 2rem;
+    z-index: 1;
+  }
+
+  &--section {
+    display: flex;
+    gap: 1rem;
+  }
+
+  &--logo {
+    font-size: 1.5rem;
+    letter-spacing: 0.5rem;
+    font-family: Helvetica, sans-serif;
+  }
+
+  &--button {
+    @extend .buttonStyle;
+  }
+}
