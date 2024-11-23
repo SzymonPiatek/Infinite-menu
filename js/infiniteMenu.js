@@ -1,4 +1,4 @@
-import { generateMenu } from "./infiniteMenuSections.js";
+import { generateMenu } from "./generateInfiniteMenu.js";
 import { initializeScroll } from "./infiniteScroll.js";
 
 document.addEventListener("DOMContentLoaded", () => {
