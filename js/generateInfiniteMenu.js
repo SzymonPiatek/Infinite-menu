@@ -9,6 +9,7 @@ export function generateMenu(containerSelector) {
                 <a class="infinite-menu--elements--element--title" href="${section.titleHref}">
                     ${section.title}
                 </a>
+                <p class="infinite-menu--elements--element--title">/</p>
                 <div class="infinite-menu--elements--element--blocks">
                     ${section.blocks.map((block) => `
                         <a class="infinite-menu--elements--element--blocks--block" href="${block.href}">
