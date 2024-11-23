@@ -1,30 +1,42 @@
 const sections = [
     {
-        title: "Example 1",
+        title: "Example Text",
         titleHref: "/",
         blocks: [
             { name: "Block 1", href: "/#1" },
-            { name: "Block 2", href: "/#2" },
+            { name: "Very Extended Block 2", href: "/#2" },
             { name: "Block 3", href: "/#3" },
+            { name: "Extended Block 4", href: "/#4" },
+            { name: "Very Extended Block 5", href: "/#5" },
         ],
     },
     {
-        title: "Example 2",
+        title: "Test Element",
         titleHref: "/",
         blocks: [
-            { name: "Block 1", href: "/#1" },
+            { name: "Extended Block 1", href: "/#1" },
         ],
     },
     {
         title: "Example 3",
         titleHref: "/",
         blocks: [
-            { name: "Block 1", href: "/#1" },
-            { name: "Block 2", href: "/#2" },
+            { name: "Very Extended Block 1", href: "/#1" },
+            { name: "Extended Block 2", href: "/#2" },
         ],
     },
     {
-        title: "Example 4",
+        title: "About Us",
+        titleHref: "/",
+        blocks: [
+            { name: "Block 1", href: "/#1" },
+            { name: "Extended Block 2", href: "/#2" },
+            { name: "Block 3", href: "/#3" },
+            { name: "Block 4", href: "/#4" },
+        ],
+    },
+    {
+        title: "Contact Us",
         titleHref: "/",
         blocks: [
             { name: "Block 1", href: "/#1" },
@@ -34,20 +46,10 @@ const sections = [
         ],
     },
     {
-        title: "Example 5",
+        title: "FAQ",
         titleHref: "/",
         blocks: [
-            { name: "Block 1", href: "/#1" },
-            { name: "Block 2", href: "/#2" },
-            { name: "Block 3", href: "/#3" },
-            { name: "Block 4", href: "/#4" },
-        ],
-    },
-    {
-        title: "Example 6",
-        titleHref: "/",
-        blocks: [
-            { name: "Block 1", href: "/#1" },
+            { name: "Very Extended Block 1", href: "/#1" },
         ],
     },
     {

@@ -4,6 +4,7 @@
   width: fit-content;
   overflow: hidden;
   padding: 0 2rem;
+  max-width: 75%;
 }
 .infinite-menu--wrapper {
   position: relative;
@@ -30,17 +31,21 @@
   gap: 4rem;
   user-select: none;
   line-height: 0;
-  height: 7rem;
+  height: 8rem;
   margin-top: 2rem;
 }
 .infinite-menu--elements--element--title {
-  font-size: 5rem;
+  font-size: 6rem;
   text-align: start;
   color: #fff;
+  width: fit-content;
+  min-width: fit-content;
 }
 .infinite-menu--elements--element--blocks {
   display: flex;
+  align-items: center;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 .infinite-menu--elements--element--blocks--block {
   color: #fff;
