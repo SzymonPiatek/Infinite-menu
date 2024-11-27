@@ -9,6 +9,9 @@
 
   &--wrapper {
     position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 60dvh;
     max-height: calc(100dvh - 4rem);
     overflow: hidden;
     overscroll-behavior: none;
